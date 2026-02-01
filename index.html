@@ -11,29 +11,19 @@
     ></script>
   </head>
   <body>
-    <section class="lanes">
-      <div class="lane">
-        <div class="lane-header">
-          <h2 class="title">/r/title</h2>
-          <button class="options">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          </button>
-        </div>
-        <div class="posts"></div>
-      </div>
-    </section>
+    <section class="lanes"></section>
     <section class="new-lane">
       <button class="add-lane">
         <i class="fa-solid fa-plus"></i>
       </button>
       <div class="new-sub">
         <h3>Enter the name of a subreddit</h3>
-        <form action="">
-            <div class="input-wrapper">
-                <div>r/</div>
-                <input type="text" name="Subreddit" id="subreddit" />
-            </div>
-            <button type="submit">Add Lane</button>
+        <form action="" id="sub-form">
+          <div class="input-wrapper">
+            <div>r/</div>
+            <input type="text" name="Subreddit" id="subreddit" />
+          </div>
+          <button type="submit">Add Lane</button>
         </form>
       </div>
     </section>
