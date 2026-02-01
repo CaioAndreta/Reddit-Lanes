@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", async (event) => {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    /* gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     ScrollSmoother.create({
         smooth: 1,
         smoothTouch: 0.1,
-    });
+    }); */
     const data = await getData();
     const posts = data.data.children;
     console.log(posts);
@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                 </div>`;
         document.querySelector(".posts").innerHTML += innerHTML;
     });
+
+    document.querySelector(".new-lane .add-lane").addEventListener("click", () => {
+        document.querySelector(".new-lane .new-sub").classList.toggle("active");
+    });
+      
 });
 
 async function getData() {

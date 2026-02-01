@@ -53,10 +53,17 @@ img, picture, svg, video, canvas, audio, iframe { display: block; max-width: 100
 /* Links */
 a { text-decoration: none; color: inherit; }
 
+
+body {
+    display: flex;
+    background-color: #222;
+    font-family: Arial, sans-serif;
+    overflow-y: hidden;
+}
+
 .lanes {
     display: flex;
     gap: 0px;
-    background-color: #222;
     height: 100vh;
     color: #ddd
 }
@@ -64,15 +71,15 @@ a { text-decoration: none; color: inherit; }
 .lane {
     width: 400px;
     border: 1px solid #333;
+    overflow-y: scroll;
 }
 
 .lane-header {
-    height: 60px;
     background-color: #333;
     border-bottom: 1px solid #444;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 16px;
 }
 
 .lane-header h2 {
@@ -89,4 +96,78 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 1px solid #444;
     display: flex;
     gap: 16px;
+}
+
+.new-lane {
+    padding: 16px;
+    width: 400px;
+}
+
+.add-lane {
+    width: 48px;
+    height: 48px;
+    padding: 16px;
+    background-color: #FF5700;
+    color: #ddd;
+    border-radius: 50%;
+    font-size: 16px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.new-sub {
+    margin-top: 16px;
+    background-color: #0A0A0A;
+    padding: 16px;
+    border: 1px solid #555;
+    color: #eee;
+    border-radius: 16px;
+    display: none;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.new-sub.active {
+    display: block;
+}
+
+.new-sub h3 {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.new-sub form .input-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 20px;
+}
+
+.new-sub form .input-wrapper div {
+    margin-right: 8px;
+}
+
+.new-sub form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: #eee;
+    font-size: 16px;
+}
+
+.new-sub form button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FF5700;
+    color: #eee;
+    font-weight: bold;
+    cursor: pointer;
 }
